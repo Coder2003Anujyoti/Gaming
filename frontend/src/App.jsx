@@ -49,7 +49,7 @@ const App = () => {
   <div className="w-full flex flex-row flex-wrap justify-center gap-4 my-12">
   <img src="images/rock.png" className="rounded-md w-28 h-20" onClick={() => handlePick('rock')}></img>
   <img src="images/paper.png" className="rounded-md w-28 h-20" onClick={() => handlePick('paper')}></img>
-  <img src="images/scissors.png" className="rounded-md w-28 h-20" onClick={() => handlePick('scissor')}></img>
+  <img src="images/scissor.png" className="rounded-md w-28 h-20" onClick={() => handlePick('scissor')}></img>
   </div>
  </>}
  {result && 
