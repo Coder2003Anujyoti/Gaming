@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:8000'); // Adjust the URL if needed
+const socket = io('https://gaming-u1z1.onrender.com/'); // Adjust the URL if needed
 
 const App = () => {
     const [playerName, setPlayerName] = useState('');
