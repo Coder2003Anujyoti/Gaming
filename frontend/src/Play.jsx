@@ -32,8 +32,7 @@ const Play = () => {
       setMessage(data.msg);
     })
     return ()=>{
-      socket.off("waiting")
-      socket.off("playerLeft")
+      socket.off("waiting");
       socket.disconnect();
     };
   },[])
