@@ -33,6 +33,9 @@ const Play = () => {
     })
     return ()=>{
       socket.off("waiting")
+      socket.off("playerLeft",(data)=>{
+        setDisable(false)
+      })
       socket.disconnect();
     };
   },[])
