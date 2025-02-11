@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from "react";
 import {io} from "socket.io-client";
-const socket=io("https://gaming-u1z1.onrender.com/");
+const socket=io("https://cruel-ginger-apisjdjjd-e9ce50b1.koyeb.app/");
 const Play = () => {
  const [message,setMessage]=useState("");
  const [waiting,setWaiting]=useState(null)
