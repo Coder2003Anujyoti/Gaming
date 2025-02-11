@@ -102,7 +102,7 @@ io.to(assignedroom).emit("waiting","Waiting for another Player....")
       delete rooms[roomId];
     }
     else{
-    io.to(roomId).emit("playerLeft","A player has been disconnected....")
+    io.to(rooms[roomId][0]).emit("playerLeft","A player has been disconnected....")
     }
    }
  })
