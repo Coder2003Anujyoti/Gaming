@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import io from 'socket.io-client';
 
-const socket = io('https://gaming-u1z1.onrender.com/'); // Adjust the URL if needed
+const socket = io('http://localhost:8000/'); // Adjust the URL if needed
 
 const App = () => {
     const [playerName, setPlayerName] = useState('');
@@ -42,7 +42,7 @@ const App = () => {
   <div className="w-full py-16 flex justify-center"><h1 className="text-xl shadow-slate-400 font-bold text-gray-400">Rock-Paper-Scissors Game</h1></div>
       {display===true && <>
     <div className="w-full  flex justify-center">
-   <input  type="text" placeholder="Enter your name"  value={playerName} onChange={(e) => setPlayerName(e.target.value)} className="bg-black focus:outline-none text-slate-400 font-bold rounded-md"/>
+   <input  type="text" placeholder="Enter your name"  value={playerName} onChange={(e) => setPlayerName(e.target.value)} className="bg-black h-7 focus:outline-none text-slate-400 font-bold rounded-md"/>
    </div>
   </>}
  {load===false && <>
