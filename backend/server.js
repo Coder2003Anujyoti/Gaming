@@ -100,9 +100,11 @@ io.to(assignedroom).emit("waiting","Waiting for another Player....")
      rooms[roomId]=rooms[roomId].filter((p)=>p.id!=socket.id)
     if(rooms[roomId].length==0){
       delete rooms[roomId];
+      break;
     }
     else{
-    io.to(rooms[roomId][0].id).emit("playerLeft","A player has been disconnected....")
+    io.to(roomId).emit("playerLeft","A player has been disconnected....")
+    break;
     }
    }
  })
