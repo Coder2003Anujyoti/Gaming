@@ -19,7 +19,6 @@ const Play = () => {
     });
     socket.on("playerLeft",(data)=>{
     alert(data)
-    setDisable(true)
     })
     socket.on("gameStart",(data)=>{
       alert("Player has been joined.")
@@ -30,6 +29,7 @@ const Play = () => {
     socket.on("winner",(data)=>{
       setData(data.info);
       setMessage(data.msg);
+      setDisable(false)
     })
     return ()=>{
       socket.off("waiting");
@@ -49,6 +49,7 @@ const Play = () => {
       
     socket.emit("makemove",move,roomId);
     setMessage("");
+    setDisable(true)
     }
   }
   return (
